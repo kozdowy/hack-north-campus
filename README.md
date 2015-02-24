@@ -6,10 +6,12 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
 
 ###Details
 * Utilize an already existing grid-like structure on North Campus
-  * Must be large enough to allow for games like Pong, Snake, Game of Life, Breakout, potentially Pac-man if multi-coloured
+  * Must be large enough to allow for games like Pong, Snake, Game of Life, Tron, Breakout, potentially Pac-man if multi-coloured
 * iOS and Android apps to control the arcade machine
-  * Hooks in in-turn, potentially over bluetooth over Wi-fi
+  * Hooks in in-turn, potentially over Bluetooth over Wi-Fi
   * Allows selection of game, potentially allow two player if the game allows it
+  * Do we want something dedicated though?
+* Spectators can have an effect on the game somehow
 
 ###Logistics
 * Campus Contact: TBD
