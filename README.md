@@ -11,6 +11,7 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
   * Split-fold Display -> Will allow us to "create" a 64x64 grid
   * Potentially do "infinite resolution" by displaying the actual object we want to display as opposed to pixels
     * Linear actuators in Pong
+  * Giant Etch-a-sketch
 * iOS and Android apps to control the arcade machine
   * Hooks in in-turn, potentially over Bluetooth over Wi-Fi
   * Allows selection of game, potentially allow two player if the game allows it
