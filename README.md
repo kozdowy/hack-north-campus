@@ -34,5 +34,9 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
   * Potential: side of BBB to the right of the main entrance
   * Server room of BBB
 * How do we get the light-grid up?
-* Budget
+* Budget/Parts List
   * 1000 RGB LEDs -> $360
+  * Polycarb panels for LEDs -> $15 for 6"x6"
+    * http://www.mcmaster.com/#standard-plastic-sheets/=w8okt6
+  * PCBs -> $350 for all
+    * 1 for every 4 boards
