@@ -40,3 +40,4 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
     * http://www.mcmaster.com/#standard-plastic-sheets/=w8okt6
   * PCBs -> $350 for all
     * 1 for every 4 boards
+  * Overall, looking at $1000
