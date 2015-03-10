@@ -33,3 +33,5 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
   * Potential: side of BBB to the right of the main entrance
   * Server room of BBB
 * How do we get the light-grid up?
+* Budget
+  * 1000 RGB LEDs -> $360
