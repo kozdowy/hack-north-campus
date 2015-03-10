@@ -10,6 +10,7 @@ Overview: Provide North Campus with a neat technology hack along the lines of th
   * Minimum number of pixels: 16x16
     * Do we need to make it square?
     * Lots of long hallways
+    * 32x20 grid -> 16:10 ratio, very nice
   * Diffusing panels with lights?
 * Build up a server that will run and people can hook in to
   * Allows control of the grid too
