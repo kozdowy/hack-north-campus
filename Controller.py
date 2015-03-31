@@ -1,7 +1,7 @@
 from neopixel import *
-import LightGrid
+import LightGrid as LightGrid
 row = 1
-col = 10
+col = 30
 lights = LightGrid(row, col)
 while True:
     line = raw_input()
