@@ -1,3 +1,4 @@
+
 import time
 import sys
 from neopixel import *
@@ -53,22 +54,27 @@ class TheGrid:
             #for j in range(len(grid[0])):
                 #self.strands[i].setPixelColor(j, color)
 
-#row = 12
-#col = 21
-#lights = TheGrid(row, col)
-#
-#
-#
-#while True:
-    #line = sys.stdin.readline()
-    ##t = time.time()
-    #try:
-	    #lineSplit = line.split(" ")
-	    #r = int(lineSplit[3][0:2], 16)
-	    #g = int(lineSplit[3][2:4], 16)
-	    #b = int(lineSplit[3][4:6], 16)
-	    ##print "setting pixel " + lineSplit[1] + "," + lineSplit[2] + " to " + lineSplit[3] + " and waiting " + lineSplit[0]
-	    #lights.setPixel(int(lineSplit[0]), int(lineSplit[1]), int(lineSplit[2]), Color(r, g, b))
-	    ##print time.time() - t
-    #except:
-    	    #print "bad input"
+row = 12
+col = 21
+lights = TheGrid(row, col)
+
+
+
+while True:
+    line = sys.stdin.readline()
+    #t = time.time()
+    if line.strip() == 'q':
+    	quit()
+    if line.strip() == "display":
+    	lights.showGrid()
+    else:
+	    try:
+		    lineSplit = line.split(" ")
+		    r = int(lineSplit[3][0:2], 16)
+		    g = int(lineSplit[3][2:4], 16)
+		    b = int(lineSplit[3][4:6], 16)
+		    #print "setting pixel " + lineSplit[1] + "," + lineSplit[2] + " to " + lineSplit[3] + " and waiting " + lineSplit[0]
+		    lights.setPixel(int(lineSplit[0]), int(lineSplit[1]), int(lineSplit[2]), Color(r, g, b))
+		    #print time.time() - t
+	    except:
+		    print "bad input"

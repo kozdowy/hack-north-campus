@@ -3,10 +3,13 @@ from time import sleep as sleep
 import sys
 blue = "00274C"
 maize = "FFCB05"
-length = 20
-cols = 30
+length = 12
+cols = 21
 delay = 0
-while True:
+x = 0
+while x < 1:
+	x = 1
+
 	for i in range(length):
 		for j in range(cols):
 			print 0,
@@ -17,9 +20,13 @@ while True:
 			else:
 				print maize
 			sys.stdout.flush()
+		print "display"
+		sys.stdout.flush()
 			#sleep(100 / 1000)
 
 
+print 'q'
+sys.stdout.flush()
 #	print delay,
 #	print 0,
 	#print k,

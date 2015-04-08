@@ -5,14 +5,14 @@
 # various animations on a strip of NeoPixels.
 import time
 import sys
-sys.path.append('/home/Pi/hack-north-campus/rpi_ws281x/python/examples/')
-import TheGrid
+#sys.path.append('/home/Pi/hack-north-campus/rpi_ws281x/python/examples/')
+#import TheGrid
 
 from neopixel import *
 
 
 # LED strip configuration:
-LED_COUNT      = 300      # Number of LED pixels.
+LED_COUNT      = 30      # Number of LED pixels.
 LED_PIN        = 18      # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
@@ -24,8 +24,8 @@ LED_INVERT     = False   # True to invert the signal (when using NPN transistor 
 def colorWipe(strip, color, wait_ms=50):
 	"""Wipe color across display a pixel at a time."""
 	for i in range(strip.numPixels()):
-		#strip.setPixelColor(i, color)
-		lg.setPixel(wait_ms, i % 21, i / 21, color)
+		strip.setPixelColor(i, color)
+		#lg.setPixel(wait_ms, i % 21, i / 21, color)
 		strip.show()
 		time.sleep(wait_ms/1000.0)
 
@@ -83,22 +83,22 @@ def theaterChaseRainbow(strip, wait_ms=50):
 # Main program logic follows:
 if __name__ == '__main__':
 	# Create NeoPixel object with appropriate configuration.
-	#strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
+	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS)
 	# Intialize the library (must be called once before other functions).
-	#strip.begin()
-	lg = TheGrid(12, 21)
+	strip.begin()
+	#lg = TheGrid(12, 21)
 
 	print 'Press Ctrl-C to quit.'
 	while True:
 		# Color wipe animations.
-		colorWipe(lg, Color(255, 0, 0))  # Red wipe
-		colorWipe(lg, Color(0, 255, 0))  # Blue wipe
-		colorWipe(lg, Color(0, 0, 255))  # Green wipe
+		colorWipe(strip, Color(255, 0, 0))  # Red wipe
+		colorWipe(strip, Color(0, 255, 0))  # Blue wipe
+		colorWipe(strip, Color(0, 0, 255))  # Green wipe
 		# Theater chase animations.
-		theaterChase(lg, Color(127, 127, 127))  # White theater chase
-		theaterChase(lg, Color(127,   0,   0))  # Red theater chase
-		theaterChase(lg, Color(  0,   0, 127))  # Blue theater chase
+		theaterChase(strip, Color(127, 127, 127))  # White theater chase
+		theaterChase(strip, Color(127,   0,   0))  # Red theater chase
+		theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
 		# Rainbow animations.
-		rainbow(lg)
-		rainbowCycle(lg)
+		rainbow(strip)
+		rainbowCycle(strip)
 		theaterChaseRainbow(strip)
